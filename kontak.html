@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kotak Saran Toko Online</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .feedback-box {
+        width: 400px;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        animation: slideIn 0.5s forwards;
+    }
+    @keyframes slideIn {
+        from {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .feedback-box h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+    .feedback-box label {
+        display: block;
+        margin-bottom: 8px;
+        text-align: left;
+        color: #555;
+    }
+    .feedback-box textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+    }
+    .feedback-box input[type="text"],
+    .feedback-box input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .feedback-box input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .feedback-box input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="feedback-box">
+    <h2>Kotak Saran</h2>
+    <form action="proses_feedback.php" method="post">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+        
+        <label for="saran">Saran Anda:</label>
+        <textarea id="saran" name="saran" rows="4" placeholder="Tulis saran Anda di sini..." required></textarea>
+        
+        <input type="submit" value="Kirim Saran">
+    </form>
+</div>
+
+</body>
+</html>
